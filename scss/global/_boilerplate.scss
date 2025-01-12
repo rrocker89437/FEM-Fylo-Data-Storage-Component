@@ -7,12 +7,16 @@
 // }
 
 // @media (max-width: u.em(999)) {
-//   .wrapper-mobile {
-//     max-width: u.rem(550);
-//     margin-inline: auto;
-//     padding: u.rem(30);
-//   }
-// }
+
+.wrapper {
+  // max-width: u.rem(400);
+  margin-inline: auto;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 100%;
+}
 
 *,
 *::before,
@@ -23,9 +27,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-size: u.rem(15);
-  background-color: var(--gray-lt);
+  box-sizing: inherit;
+  height: 100vh;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: u.rem(14);
+  background-image: url(../../public/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {
@@ -37,6 +45,6 @@ h1,
 h2,
 h3,
 p {
-  font-size: u.rem(15);
+  font-size: u.rem(14);
   margin: 0;
 }

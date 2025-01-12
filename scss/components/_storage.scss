@@ -1,0 +1,98 @@
+@use "../util/" as u;
+
+.main {
+  &__storage {
+    display: flex;
+    flex-direction: column;
+
+    margin: u.rem(30) auto;
+    position: relative;
+    max-width: u.rem(420);
+    height: u.rem(210);
+    padding: u.rem(50) u.rem(40);
+    border-radius: u.rem(15);
+    background-color: var(--blue-drk);
+
+    &--desc {
+      margin-top: u.rem(-8);
+      text-align: center;
+      font-size: u.rem(18);
+      font-weight: 400;
+      color: var(--blue-pale);
+
+      span {
+        font-weight: 700;
+      }
+    }
+
+    &--visual {
+      //   outline: 1px solid red;
+      position: relative;
+      align-self: center;
+      width: u.rem(350);
+      height: u.rem(30);
+      margin-top: u.rem(22);
+      border-radius: u.rem(50);
+      background-color: var(--bar-backgrnd);
+    }
+
+    &--bar {
+      position: absolute;
+      top: u.rem(3.4);
+      left: u.rem(5);
+      align-self: center;
+      width: u.rem(250);
+      height: u.rem(20);
+      border-radius: u.rem(50);
+      background-image: linear-gradient(
+        to right,
+        var(--pink-lt),
+        var(--pink-drk)
+      );
+    }
+
+    &--circle {
+      position: absolute;
+      top: 10%;
+      right: 1%;
+      width: u.rem(15);
+      height: u.rem(15);
+      border-radius: 50%;
+      background-color: var(--white);
+    }
+
+    &--info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: u.rem(15);
+
+      &--left {
+        font-size: u.rem(15);
+        color: var(--blue-pale);
+      }
+
+      &--right {
+        font-size: u.rem(15);
+        color: var(--blue-pale);
+      }
+    }
+
+    &--container {
+      position: relative;
+      &--bubble {
+        position: absolute;
+        border: 1px solid red;
+        width: u.rem(210);
+        height: u.rem(100);
+      }
+
+      &--gb {
+        color: var(--blue-gray);
+
+        span {
+          color: var(--blue-drker);
+        }
+      }
+    }
+  }
+}
