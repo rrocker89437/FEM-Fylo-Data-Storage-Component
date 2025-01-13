@@ -25,13 +25,23 @@ html {
 }
 
 body {
+  @media screen and (min-width: u.em(1000)) {
+    overflow: hidden;
+    background-image: url(./bg-desktop.png);
+    background-color: var(--blue-drker);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 100%;
+    background-size: 100% 50%;
+  }
+
   margin: 0;
   padding: 0;
   box-sizing: inherit;
   height: 100vh;
   font-family: "Raleway", Arial, Helvetica, sans-serif;
   font-size: u.rem(14);
-  background-image: url(../../public/bg-mobile.png);
+  background-image: url(./bg-mobile.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,6 +55,5 @@ h1,
 h2,
 h3,
 p {
-  font-size: u.rem(14);
   margin: 0;
 }

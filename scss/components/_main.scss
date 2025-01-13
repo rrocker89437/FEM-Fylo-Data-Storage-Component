@@ -1,8 +1,22 @@
 @use "../util/" as u;
 
 .main {
+  @media screen and (min-width: u.em(1000)) {
+    display: flex;
+    align-items: center;
+    margin: 0 u.rem(15);
+    margin-top: u.rem(260);
+  }
+
+  margin-top: u.rem(180);
+
   &__fylo {
-    margin: u.rem(30) auto;
+    @media screen and (min-width: u.em(1000)) {
+      width: u.rem(520);
+      margin-right: 0;
+    }
+
+    margin: 0 auto;
     position: relative;
     max-width: u.rem(420);
     height: u.rem(265);

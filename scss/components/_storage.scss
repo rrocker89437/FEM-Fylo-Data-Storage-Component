@@ -2,18 +2,28 @@
 
 .main {
   &__storage {
+    @media screen and (min-width: u.em(1000)) {
+      margin-left: u.rem(40);
+      margin-top: u.rem(85);
+      width: u.rem(600);
+    }
+
     display: flex;
     flex-direction: column;
 
     margin: u.rem(30) auto;
     position: relative;
-    max-width: u.rem(420);
+    width: u.rem(420);
     height: u.rem(210);
     padding: u.rem(50) u.rem(40);
     border-radius: u.rem(15);
     background-color: var(--blue-drk);
 
     &--desc {
+      @media screen and (min-width: u.em(1000)) {
+        text-align: start;
+      }
+
       margin-top: u.rem(-8);
       text-align: center;
       font-size: u.rem(18);
@@ -26,7 +36,10 @@
     }
 
     &--visual {
-      //   outline: 1px solid red;
+      @media screen and (min-width: u.em(1000)) {
+        width: u.rem(520);
+      }
+
       position: relative;
       align-self: center;
       width: u.rem(350);
@@ -37,8 +50,12 @@
     }
 
     &--bar {
+      @media screen and (min-width: u.em(1000)) {
+        width: u.rem(380);
+      }
+
       position: absolute;
-      top: u.rem(3.4);
+      top: u.rem(5);
       left: u.rem(5);
       align-self: center;
       width: u.rem(250);
@@ -78,21 +95,56 @@
     }
 
     &--container {
+      @media screen and (min-width: u.em(1000)) {
+        position: static;
+      }
       position: relative;
       &--bubble {
-        position: absolute;
-        border: 1px solid red;
-        width: u.rem(210);
-        height: u.rem(100);
-      }
+        @media screen and (min-width: u.em(1000)) {
+          top: u.rem(-60);
+          left: u.rem(325);
 
-      &--gb {
-        color: var(--blue-gray);
-
-        span {
-          color: var(--blue-drker);
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            width: 55px;
+            height: 50px;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            background-color: var(--white);
+          }
         }
+
+        position: absolute;
+        top: u.rem(25);
+        left: u.rem(55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: u.rem(235);
+        height: u.rem(90);
+        border-radius: u.rem(15);
+        background-color: var(--white);
       }
+
+      &--bubble--gb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: var(--blue-gray);
+      }
+    }
+
+    &--number {
+      font-size: u.rem(50);
+      color: var(--blue-drker);
+    }
+
+    &--text {
+      margin-left: u.rem(10);
+      font-size: u.rem(15);
     }
   }
 }
